@@ -1,0 +1,70 @@
+﻿<!DOCTYPE html>
+<html xmlns:ng="http://angularjs.org">
+<head>
+    <title><%= title %></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css" />
+</head>
+<body ng-app="studentapp">
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">Brand</a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li class="dropdown">
+                        <a href="#!/students" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Students  <span class="caret"></span></a>
+                        <ul class="dropdown-menu" role="menu">
+                            <li><a href="#!/students">List</a></li>
+                            <li><a href="#!/students/create">Create</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Dilan Arandara  <span class="caret"></span></a>
+                        <ul class="dropdown-menu" role="menu">
+                            <li><a href="#">My Profile</a></li>
+                            <li class="divider"></li>
+                            <li><a href="/signout">Sign out</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div><!-- /.navbar-collapse -->
+        </div><!-- /.container-fluid -->
+    </nav>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-offset-2 col-md-6">
+                <%-body%>
+            </div>
+        </div>
+    </div>
+
+    <!-- Load local libraries -->
+    <script type="text/javascript" src="/lib/jquery/dist/jquery.min.js"></script>
+    <script type="text/javascript" src="/lib/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="/lib/angular/angular.min.js"></script>
+    <script type="text/javascript" src="/lib/angular-route/angular-route.min.js"></script>
+    <script type="text/javascript" src="/lib/angular-resource/angular-resource.min.js"></script>
+
+    <!-- Load the students module -->
+    <script type="text/javascript" src="/students/students.client.module.js"></script>
+    <script type="text/javascript" src="/students/services/students.client.service.js"></script>
+    <script type="text/javascript" src="/students/controllers/students.client.controller.js"></script>
+    <script type="text/javascript" src="/students/config/students.client.routes.js"></script>
+
+    <!-- Load AngularJS application -->
+    <script type="text/javascript" src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,13 @@
+﻿<div ng-controller="StudentController" ng-init="findOne()">
+    <dl class="dl-horizontal">
+        <dt>First Name :</dt>
+        <dd>{{student.firstName}}</dd>
+        <dt>Last Name :</dt>
+        <dd>{{student.lastName}}</dd>
+        <dt>Email :</dt>
+        <dd>{{student.email}}</dd>
+        <dt>Age :</dt>
+        <dd>{{student.age}}</dd>
+    </dl>
+    <a class="btn btn-primary" href="#!/students/{{student._id}}/edit" role="button">Edit</a>
+</div>
